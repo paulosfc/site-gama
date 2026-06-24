@@ -1,81 +1,87 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #1a1a1a;
-    color: white;
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #000000;
+    color: #fff;
+    padding: 30px;
 }
 
 .container {
     max-width: 900px;
     margin: auto;
-    background: #2b2b2b;
+    background: #062415;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
 }
 
 h1 {
     text-align: center;
-    color: #268C4A;
+    margin-bottom: 25px;
+    color: #30664b;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+::placeholder {
+    color: white;
 }
 
 label {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
-input, select, textarea {
+input[type='text'],
+input[type='date'],
+textarea,
+select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 5px;
-    box-sizing: border-box;
+    border-radius: 8px;
+    background: #3f8a64;
+    color: white;
 }
 
 textarea {
     resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 8px;
+}
+
+.checkbox-group label {
+    background: #3f8a64;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: normal;
 }
 
 button {
-    margin-top: 20px;
     width: 100%;
-    padding: 12px;
-    background: #268C4A;
-    color: white;
+    padding: 15px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 10px;
+    background: #398860;
+    color: white;
     cursor: pointer;
+    transition: .3s;
 }
 
 button:hover {
-    background: #2A5841;
-}
-
-.selecionados { 
-    background: #1f1f1f;
-    border: 1px solid #444;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-
-.selecionados p {
-    margin: 5px 0 0;
-    color: #2A5841;
-    font-weight: bold;
-}
-
-.vitoria {
-    background-color: rgb(55, 201, 55);
-    color: white;
-}
-
-.derrota {
-    background-color: rgb(207, 14, 14);
-    color: white;
+    background-color: #2A5841;
 }
