@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMA</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Relatório de Ações GAMA</h1>
+        <form>
+            <label>QRA: </label>
+            <select name="qra" id="qra" required>
+                <option value="">-- Selecione --</option>
+                <option>Jimmy Ravenwood</option>
+                <option>Chiara Moreira</option>
+                <option>Kaelith Ravenwood</option>
+                <option>Natalie Giordano</option>
+                <option>Mikaela Grey</option>
+                <option>Paulo Ferreira</option>
+                <option>Pedro Santiago</option>
+                <option>Bianca Esposito</option>
+                <option>Alice Russo</option>
+                <option>Beatriz Cabello</option>
+                <option>Mila Kanté</option>
+            </select>
+
+
+            <label>Data: </label>
+            <input type="date" name="data" id="data" required>
+
+            <label>QRU: </label>
+            <select name="qru" id="qru" required>
+                <option value="">-- Selecione--</option>
+                <option>Banco Central</option>
+                <option>Fleeca (Paleto)</option>
+                <option>Fleeca (Rota 68)</option>
+                <option>Fleeca (Shooping)</option>
+                <option>Fleeca (Anjos News)</option>
+                <option>Fleeca (Praia)</option>
+                <option>Fleeca (Villa do Chaves)</option>
+                <option>Joalheria</option>
+                <option>Galinheiro</option>
+                <option>Madereira</option>
+                <option>Açogue</option>
+                <option>Aeroporto do Norte</option>
+                <option>Zancudo</option>
+                <option>Ferro Velho Norte</option>
+                <option>Ferro Velho Sul</option>
+                <option>Loja de Departamento (Vanilla)</option>
+                <option>Loja de Departamento (Arcanjos)</option>
+                <option>Loja de Departamento (Mirror Park)</option>
+                <option>Loja de Departamento (China)</option>
+                <option>Loja de Departamento (Ballas)</option>
+                <option>Loja de Departamento (Central)</option>
+                <option>Loja de Departamento (Praia)</option>
+                <option>Loja de Departamento (Pops)</option>
+                <option>Loja de Departamento (Ark)</option>
+                <option>Loja de Departamento (Sandy Shores)</option>
+                <option>Loja de Departamento (Megal Mall Norte)</option>
+                <option>Loja de Departamento (Grapeseed)</option>
+                <option>Loja de Departamento (Faculdade)</option>
+                <option>Loja de Departamento (Naturalli)</option>
+                <option>Loja de Armamentos (Praça)</option>
+                <option>Loja de Armamentos (Porto)</option>
+                <option>Loja de Armamentos (China)</option>
+                <option>Loja de Armamentos (Rota 68)</option>
+                <option>Loja de Armamentos (Sandy Shores)</option>
+            </select>
+
+            <label>Facção: </label>
+            <select name="faccao" id="faccao" multiple size="4" required>
+                <!-- <option value="">-- Selecione --</option> -->
+                <option>Águias (Preto + Colete)</option>
+                <option>Aura (Preto + Detalhes Roxo)</option>
+                <option>Ballas (Roxo)</option>
+                <option>Black Heart (Social Preto)</option>
+                <option>Blue Rose (Preto + Detalhes Azul)</option>
+                <option>Cartel (Branco)</option>
+                <option>D13 (Camuflado Verde)</option>
+                <option>Domus (Social Cinza)</option>
+                <option>Famillies (Verde)</option>
+                <option>Hells Angels (Rosa)</option>
+                <option>Hydra (Camuflado Vermelho)</option>
+                <option>La Guardia (Camuflado Roxo)</option>
+                <option>Meraki (Preto + Detalhes Amarelo)</option>
+                <option>Nekutai (Vermelho + Katana)</option>
+                <option>Nox (Preto + Detalhes Vermelho)</option>
+                <option>Ruptura (Laranja)</option>
+                <option>Vagos (Amarelo)</option>
+                <option>Valhalla (Cinza)</option>
+                <option>Vendetta (Branco + Detalhes Laranja)</option>
+                <option>Void (Azul)</option>
+                <option>PISTA</option>
+            </select>
+
+            <div class="selecionados">
+                <strong>Facções Selecionadas:</strong>
+                <p id="faccaoSelecionados">Nenhum Selecionado</p>
+            </div>
+
+            <label>Resultado: </label>
+            <select name="resultado" required>
+                <option value="">-- Selecione --</option>
+                <option class="vitoria">Vitória</option>
+                <option class="derrota">Derrota</option>
+            </select>
+
+            <label>Participantes: </label>
+
+            <div class="multiselect">
+                <div class="select-box" onclick="toggleLista('participantesLista')">
+                    Clique para selecionar participantes
+                </div>
+
+                <div class="checkbox-list" id="participantesLista">
+                    <label><input type="checkbox" value="Jimmy Ravenwood">Jimmy Ravenwood</label>
+                    <label><input type="checkbox" value="Chiara Moreira">Chiara Moreira</label>
+                    <label><input type="checkbox" value="Kaelith Ravenwood">Kaelith Ravenwood</label>
+                    <label><input type="checkbox" value="Natalie Giordano">Natalie Giordano</label>
+                    <label><input type="checkbox" value="Mikaela Grey">Mikaela Grey</label>
+                    <label><input type="checkbox" value="Paulo Ferreira">Paulo Ferreira</label>
+                    <label><input type="checkbox" value="Pedro Santiago">Pedro Santiago</label>
+                    <label><input type="checkbox" value="Bianca Esposito">Bianca Esposito</label>
+                    <label><input type="checkbox" value="Alice Russo">Alice Russo</label>
+                    <label><input type="checkbox" value="Beatriz Cabello">Beatriz Cabello</label>
+                    <label><input type="checkbox" value="Mila Kanté">Mila Kanté</label>
+                </div>
+            </div>
+
+            <div class="selecionados">
+                <strong>Participantes Selecionados:</strong>
+                <p id="participantesSelecionados">Nenhum Selecionado</p>
+            </div>
+
+            <label>Comando : </label> 
+            <select name="comando" id="comando" multiple size="4" required> 
+                <!-- <option>-- Selecione --</option> 
+                <option>Jimmy Ravenwood</option> 
+                <option>Chiara Moreira</option> 
+                <option>Kaelith Ravenwood</option> 
+                <option>Natalie Giordano</option> 
+                <option>Mikaela Grey</option> 
+                <option>Paulo Ferreira</option> 
+                <option>Pedro Santiago</option>
+                <option>Bianca Esposito</option> 
+                <option>Alice Russo</option> 
+                <option>Beatriz Cabello</option> 
+                <option>Mila Kanté</option>  -->
+            </select>
+
+            <div class="selecionados">
+                <strong>Selecionados:</strong>
+                <p id="comandoSelecionados">Nenhum Selecionado</p>
+            </div>
+
+            <label>Observações: </label>
+            <textarea name="obs" id="obs"></textarea>
+
+            <button type="submit">Enviar Relatório</button>
+
+        </form>
+
+    </div>
+</body>
+<script src="script.js">
+
+</script>
+</html>

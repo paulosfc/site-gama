@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #2b2b2b;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+
+h1 {
+    text-align: center;
+    color: #268C4A;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #268C4A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2A5841;
+}
+
+.selecionados { 
+    background: #1f1f1f;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.selecionados p {
+    margin: 5px 0 0;
+    color: #2A5841;
+    font-weight: bold;
+}
+
+.vitoria {
+    background-color: rgb(55, 201, 55);
+    color: white;
+}
+
+.derrota {
+    background-color: rgb(207, 14, 14);
+    color: white;
+}
