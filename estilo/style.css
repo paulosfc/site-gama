@@ -57,6 +57,61 @@ textarea {
     min-height: 120px;
 }
 
+.resultado-box {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.resultado-item {
+    flex: 1;
+    min-width: 180px;
+
+    background: #4c925e;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: .25s;
+}
+
+.resultado-item input {
+    display: none;
+}
+
+.resultado-item:hover {
+    transform: translateY(-2px);
+}
+
+.resultado-item.vitoria input:checked + span {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.resultado-item.derrota input:checked + span {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.resultado-item:has(input:checked) {
+    border-color: #3f8a64;
+    background: #0c6e35;
+    box-shadow: 0 0 15px rgba(56, 189, 248, .3);
+}
+
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .duas-colunas {
+        grid-template-columns: 1fr;
+    }
+}
+
 .checkbox-group {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
