@@ -1,10 +1,9 @@
 const axios = require("axios");
-const WEBHOOK_URL = "https://discord.com/api/webhooks/1521236604029501491/ZAa08P7z47LaYbF7f8BltNujj9a27-W_dJ5pIKYXHoLpklRqeZdeExl5qw_t_gRRGqHz";
 
 const participanteTexto = participantes.join("\n• ");
 const comandosTexto = comandos.join("\n• ");
 
-await axios.post(WEBHOOK_URL, {
+await axios.post(process.env.DISCORD_WEBHOOK, {
     embeds: 
     [
         {
