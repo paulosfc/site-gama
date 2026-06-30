@@ -103,4 +103,55 @@ participantes.forEach(participante=>{
     participante.addEventListener("change", atualizarComando);
 });
 
+app.post("/operacao", (req, res) =>{
+    const {
+        qra,
+        data_operacao,
+        qru,
+        faccao,
+        resultado,
+        participantes,
+        comandos,
+        observacao
+    } = req.body;
+
+    const sql = `
+    INSERT INTO operacoes
+    (qra, data_operacao, qru, faccao, resultado, participantes, comandos, observacao)
+    VALUES(?,?,?,?,?,?,?,?)`;
+
+    conexao.query (
+        sql,
+        [
+            qra,
+            data_operacao,
+            qru,
+            faccao,
+            resultado,
+            JSON.stringify(participantes),
+            JSON.stringify(comandos),
+            observacao
+        ]
+    );
+
+    res.json({
+        sucesso:true
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 atualizarComando();
